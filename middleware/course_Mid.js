@@ -26,6 +26,8 @@ async function GetAllCourses(req,res,next){
     next();
 }
 async function DeleteCourse(req,res,next){
+    let id= parseInt(req.body.id);
+    let Query=`DELETE FROM courses WHERE id='$'`
 
 }
 module.exports = {
