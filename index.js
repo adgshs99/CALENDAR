@@ -17,6 +17,10 @@ app.set('views', path.join(__dirname, "./views"));
 global.addSlashes    = require('slashes').addSlashes;
 global.stripSlashes  = require('slashes').stripSlashes;
 
+
+const crs_R = require('./Routers/course_R');
+app.use('/Crs',crs_R);
+
 app.get('/', (req, res) => {
     res.render("index", {});
 })
